@@ -9,6 +9,7 @@ import Test2 from "./test2.js";
 import Render1 from "./render1.js";
 import Render2 from "./render2.js";
 import Component1 from "./Component1";
+import { Provider } from "./Component";
 
 class App extends Component {
   constructor() {
@@ -39,7 +40,9 @@ class App extends Component {
         <hr />
         <Render2 />
         <hr />
-        <Component1 name="Jagath" />
+        <Provider value="Jagath">
+          <Component1 name="Jagath" />
+        </Provider>
       </div>
     );
   }
