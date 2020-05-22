@@ -11,6 +11,7 @@ import Render2 from "./render2.js";
 import Component1 from "./Component1";
 import { Provider } from "./Component";
 import axios from "axios";
+import Form from "./Form.js";
 
 class App extends Component {
   constructor() {
@@ -35,8 +36,14 @@ class App extends Component {
     console.log("parent ----->");
     return (
       <div>
+        <div>
+          <h2>Form</h2>
+          <Form />
+        </div>
+        <br />
+        <hr />
         {this.state.posts &&
-          this.state.posts.map(data => <h1 key={data.id}>{data.title}</h1>)}
+          this.state.posts.map(data => <h3 key={data.id}>{data.title}</h3>)}
         <h1>parent component</h1>
         <input type="text" ref={this.inputRef} />
         <hr />
