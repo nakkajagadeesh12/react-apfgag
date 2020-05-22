@@ -12,6 +12,7 @@ import Component1 from "./Component1";
 import { Provider } from "./Component";
 import axios from "axios";
 import Form from "./Form.js";
+import Fun1 from './Fun1.js';
 
 class App extends Component {
   constructor() {
@@ -41,6 +42,7 @@ class App extends Component {
           <Form />
         </div>
         <br />
+        <Fun1 />
         <hr />
         {this.state.posts &&
           this.state.posts.map(data => <h3 key={data.id}>{data.title}</h3>)}
