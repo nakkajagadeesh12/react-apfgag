@@ -12,7 +12,10 @@ import Component1 from "./Component1";
 import { Provider } from "./Component";
 import axios from "axios";
 import Form from "./Form.js";
-import Fun1 from './Fun1.js';
+import Fun1 from "./Fun1.js";
+import ContextHook1 from "./Contexthook1";
+export const UserContext1 = React.createContext();
+export const UserContext2 = React.createContext();
 
 class App extends Component {
   constructor() {
@@ -60,6 +63,12 @@ class App extends Component {
         <Provider value="Jagath">
           <Component1 />
         </Provider>
+        <br />
+        <UserContext1.Provider value="Jagadeesh">
+          <UserContext2.Provider value="Naidu">
+            <ContextHook1 />
+          </UserContext2.Provider>
+        </UserContext1.Provider>
       </div>
     );
   }
